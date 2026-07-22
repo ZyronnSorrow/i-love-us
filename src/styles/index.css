@@ -1,1 +1,42 @@
 @import 'tailwindcss';
+
+@theme {
+    --color-primary: var(--color-primary);
+    --color-secondary: var(--color-secondary);
+    --color-page-color: var(--color-bg);
+    --color-text-color: var(--color-text);
+}
+
+:root {
+    --color-dark-red: #8b0000;
+    --color-dark-turquoise: #007577;
+    --color-dark-purple: #47254d;
+    --color-light: #f0f0f0;
+    --color-dark: #1b1b1b;
+
+    --color-primary: var(--color-dark-turquoise);
+    --color-secondary: var(--color-dark-red);
+    --color-bg: var(--color-light);
+    --color-text: var(--color-dark);
+}
+
+[data-theme="dark"] {
+    --color-primary: var(--color-dark-red);
+    --color-secondary: var(--color-dark-turquoise);
+    --color-bg: var(--color-dark);
+    --color-text: var(--color-light);
+}
+
+@layer base {
+    h1 {
+        @apply text-2xl font-bold md:text-3xl;
+    }
+
+    h2 {
+        @apply text-lg font-bold md:text-xl;
+    }
+
+    h3 {
+        @apply font-semibold md:text-lg;
+    }
+}

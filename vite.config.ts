@@ -5,7 +5,7 @@ import devtools from 'solid-devtools/vite';
 
 export default defineConfig({
   plugins: [devtools(), solidPlugin(), tailwindcss()],
-  base: 'https://github.com/ZyronnSorrow/i-love-us',
+  base: '/i-love-us/',
   server: {
     port: 3000,
   },
