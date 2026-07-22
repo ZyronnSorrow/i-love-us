@@ -1,10 +1,12 @@
-import { Component, JSX, Show } from 'solid-js';
+import type { Component, JSX } from 'solid-js';
+import { Show } from 'solid-js';
 
-import { theme, toggleTheme } from '../context/ThemeContext';
-import SunIcon from './icons/SunIcon';
-import MoonIcon from './icons/MoonIcon';
+import { useTheme } from '../context/ThemeContext';
+import { SunIcon } from './icons/SunIcon';
+import { MoonIcon } from './icons/MoonIcon';
 
-const ThemeToggle: Component<JSX.HTMLAttributes<HTMLButtonElement>> = (props) => {
+export const ThemeToggle: Component<JSX.HTMLAttributes<HTMLButtonElement>> = (props) => {
+    const { theme, toggleTheme } = useTheme();
     return (
         <button
             {...props}
@@ -21,6 +23,4 @@ const ThemeToggle: Component<JSX.HTMLAttributes<HTMLButtonElement>> = (props) =>
             </Show>
         </button>
     );
-}
-
-export default ThemeToggle;
+};

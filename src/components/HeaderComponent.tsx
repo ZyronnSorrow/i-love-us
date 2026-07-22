@@ -1,17 +1,17 @@
-import { Component } from 'solid-js';
+import type { Component } from 'solid-js';
 
-import ThemeToggle from './ThemeToggle';
+import { ThemeToggle } from './ThemeToggle';
 import { A } from '@solidjs/router';
+import { NavbarComponent } from './NavbarComponent';
 
-const HeaderComponent: Component = () => {
+export const HeaderComponent: Component = () => {
     return (
         <header class="flex items-center justify-between p-4 bg-primary md:px-8">
             <h1>
                 <A href="/">I Love Us.</A>
             </h1>
+            <NavbarComponent />
             <ThemeToggle />
         </header>
     );
-}
-
-export default HeaderComponent;
+};

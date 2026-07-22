@@ -1,4 +1,5 @@
-import { ParentComponent, children, splitProps, JSX, Show } from 'solid-js';
+import type { ParentComponent, JSX } from 'solid-js';
+import { children, splitProps, Show } from 'solid-js';
 
 type SvgFramedImageProps = JSX.HTMLAttributes<HTMLDivElement> & {
     src: string;
@@ -8,7 +9,7 @@ type SvgFramedImageProps = JSX.HTMLAttributes<HTMLDivElement> & {
     strokeWidth?: number;
 }
 
-const SvgFramedImage: ParentComponent<SvgFramedImageProps> = (props) => {
+export const SvgFramedImage: ParentComponent<SvgFramedImageProps> = (props) => {
     const resolvedSvg = children(() => props.children);
     const [localProps, parentProps] = splitProps(props, [
         'src', 'alt', 'scale', 'strokeColor', 'strokeWidth', 'children', 'class',
@@ -79,6 +80,4 @@ const SvgFramedImage: ParentComponent<SvgFramedImageProps> = (props) => {
             </Show>
         </div>
     );
-}
-
-export default SvgFramedImage;
+};

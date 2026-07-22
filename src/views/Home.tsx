@@ -1,9 +1,9 @@
-import { Title } from '@solidjs/meta';
 import type { Component } from 'solid-js';
+import { Title } from '@solidjs/meta';
 
-import usImgUrl from '../assets/us.jpg';
-import SvgFramedImage from '../components/SvgFramedImage';
-import HeartIcon from '../components/icons/HeartIcon';
+import usImgUrl from '../assets/images/us.jpg';
+import { SvgFramedImage } from '../components/SvgFramedImage';
+import { HeartIcon } from '../components/icons/HeartIcon';
 
 const Home: Component = () => {
     return (
