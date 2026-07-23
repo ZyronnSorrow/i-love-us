@@ -26,10 +26,11 @@ export const Carousel: Component<CarouselProps> = (props) => {
             class={`flex flex-col items-center justify-center w-full max-w-sm md:max-w-md ${localProps.class || ''}`}
         >
             {/* Image carousel */}
-            <div class="w-full relative group">
+            <div class="w-full flex items-center justify-center relative group overflow-hidden">
                 <img
                     src={currentItem()?.src}
                     alt={currentItem()?.alt}
+                    class="w-full h-full object-contain origin-center"
                 />
             </div>
             {/* Image caption */}

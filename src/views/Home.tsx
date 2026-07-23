@@ -7,7 +7,7 @@ import { HeartIcon } from '../components/icons/HeartIcon';
 
 const Home: Component = () => {
     return (
-        <div id="home" class="flex flex-col flex-1">
+        <div id="home" class="flex flex-col">
             <Title>Home | I Love Us</Title>
             <h1>I Love Us.</h1>
             <h2>You*</h2>

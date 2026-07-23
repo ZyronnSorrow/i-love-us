@@ -13,7 +13,7 @@ export const ThemeToggle: Component<JSX.HTMLAttributes<HTMLButtonElement>> = (pr
             onClick={toggleTheme}
             type="button"
             aria-label={`Switch to ${theme() === 'light' ? 'dark' : 'light'} mode`}
-            class="p-2 rounded-lg cursor-pointer bg-secondary"
+            class={`p-2 rounded-lg cursor-pointer bg-secondary ${props.class || ''}`}
         >
             <Show when={theme() === 'light'}>
                 <MoonIcon class="shrink-0 w-6 h-6" />
