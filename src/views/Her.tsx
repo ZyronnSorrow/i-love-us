@@ -6,12 +6,12 @@ import { chelseaGallery } from '../data/Gallery';
 
 const Her: Component = () => {
     return (
-        <div id="her" class="flex flex-col justify-center flex-1">
+        <div id="her" class="flex flex-col gap-2">
             <Title>Her | I Love Us</Title>
             <h1>Her.</h1>
             <hr class="my-4" />
             <h2 class="self-center">She's so lovely!</h2>
-            <Carousel items={chelseaGallery} class="self-center mt-4 h-116" />
+            <Carousel items={chelseaGallery} class="self-center mt-4 h-108" />
         </div>
     );
 }

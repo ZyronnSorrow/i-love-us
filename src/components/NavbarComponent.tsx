@@ -52,7 +52,7 @@ export const NavbarComponent: Component<JSX.HTMLAttributes<HTMLElement>> = (prop
             </div>
             {/* Mobile menu drawer */}
             <div
-                class={`md:hidden absolute top-16 right-0 flex flex-col w-48 bg-primary
+                class={`md:hidden absolute top-16 right-0 flex flex-col w-48 bg-primary z-100
                 ${isMenuOpen() ? 'visible' : 'invisible pointer-events-none'}`}
             >
                 <For each={routes}>
